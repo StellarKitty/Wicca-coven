@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <MemeDef>
+    <defName>Wicca</defName>
+    <label>wicca</label>
+    <description>Wiccans believe in a harmony between humans and Animals. They do everything to protect nature from being destroyed.</description>
+    <iconPath>Wicca/Textures/UI/wicca.png</iconPath>
+    <!--groupDef>Primacy</groupDef-->
+    <impact>2</impact>
+    <worshipRoomLabel>Temple</worshipRoomLabel>
+    <renderOrder>50</renderOrder>
+    <veneratedAnimalsCountOffset>1</veneratedAnimalsCountOffset>
+    <!--exclusionTags>
+      <li>Primacy</li-->
+    </exclusionTags>
+    <deityCount>2</deityCount>
+    <generalRules>
+      <rulesStrings>
+        <li>memeAdjective->wiccan</li>
+        <li>memeCreed->garden</li>
+        <li>memeConcept->witch</li>
+        <li>memeLeaderNoun->Head Witch</li>
+      </rulesStrings>
+    </generalRules>
+    <descriptionMaker>
+      <rules>
+        <rulesStrings>
+        </rulesStrings>
+      </rules>
+    </descriptionMaker>
+    <symbolPacks>
+      <li>
+        <ideoName>Coven</ideoName>
+        <theme>wiccan</theme>
+        <adjective>wiccan</adjective>
+        <member>Wiccan</member>
+      </li>
+    </symbolPacks>
+    <requireOne>
+      <li>
+        <li>AnimalSlaughter_Prohibited</li>
+        <li>AnimalSlaughter_Horrible</li>
+        <li>AnimalSlaughter_Disapproved</li>
+      </li>
+      <li>
+        <li>KillingInnocentAnimals_Abhorrent</li>
+        <li>KillingInnocentAnimals_Horrible</li>
+      </li>
+      <li>
+        <li>MeatEating_Abhorrent</li>
+        <li>MeatEating_Horrible</li>
+        <li>MeatEating_Disapproved</li>
+      </li>
+    <thingStyleCategories>
+      <li>
+        <category>VME_Esotericism</category>
+        <priority>1</priority>
+      </li>
+    </thingStyleCategories>
+  </MemeDef>
+</Defs>
