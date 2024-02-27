@@ -19,11 +19,13 @@
         <li>
             <packageId>VanillaExpanded.VMemesE</packageId>
             <displayName>Vanilla Ideology Expanded - Memes and Structures</displayName>
+            <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2636329500</steamWorkshopUrl>
         </li>
     </modDependencies>
 
     <forceLoadAfter>
         <li>Ludeon.RimWorld.Ideology</li>
+        <li>VanillaExpanded.VMemesE</li>
     </forceLoadAfter>
 
     <description>This mod adds another Meme I couldn't find in the Steam Workshop. 
