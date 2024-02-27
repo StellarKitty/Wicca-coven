@@ -13,12 +13,15 @@
     <veneratedAnimalsCountOffset>1</veneratedAnimalsCountOffset>
     <exclusionTags>
       <li>Primacy</li>
-      <li>Transhumanist</li>
+      <li>VME_NotRaiders</li>
+      <li>FleshAugmentation</li>
     </exclusionTags>
     <deityCount>2</deityCount>
     <generalRules>
       <rulesStrings>
         <li>memeAdjective->wiccan</li>
+        <li>memeAdjective->witch</li>
+        <li>memeAdjective->magical</li>
         <li>memeCreed->garden</li>
         <li>memeConcept->witch</li>
         <li>memeLeaderNoun->Head Witch</li>
@@ -54,6 +57,7 @@
         <li>MeatEating_Disapproved</li>
       </li>
     </requireOne>
+    
     <thingStyleCategories>
       <li>
         <category>VME_Esotericism</category>
