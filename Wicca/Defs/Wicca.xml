@@ -53,6 +53,7 @@
         <li>MeatEating_Horrible</li>
         <li>MeatEating_Disapproved</li>
       </li>
+    </requireOne>
     <thingStyleCategories>
       <li>
         <category>VME_Esotericism</category>
