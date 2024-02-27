@@ -17,14 +17,15 @@
 		    <displayName>Ideology</displayName>
         </li>
         <li>
+            <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
+            <displayName>Vanilla Expanded Framework</displayName>
+            <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
+        </li>
+        <li>
             <packageId>VanillaExpanded.VMemesE</packageId>
             <displayName>Vanilla Ideology Expanded - Memes and Structures</displayName>
             <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2636329500</steamWorkshopUrl>
         </li>
-        <li>
-            <packageId>OskarPotocki.VanillaFactionsExpanded.Core</packageId>
-            <displayName>Vanilla Expanded Framework</displayName>
-            <steamWorkshopUrl>https://steamcommunity.com/workshop/filedetails/?id=2023507013</steamWorkshopUrl>
     </modDependencies>
 
     <forceLoadAfter>
