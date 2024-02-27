@@ -20,6 +20,8 @@
     <generalRules>
       <rulesStrings>
         <li>memeAdjective->wiccan</li>
+        <li>memeAdjective->witch</li>
+        <li>memeAdjective->magical</li>
         <li>memeCreed->garden</li>
         <li>memeConcept->witch</li>
         <li>memeLeaderNoun->Head Witch</li>
@@ -66,7 +68,6 @@
         <li>AutonomousWeapons_Horrible</li>
         <li>AutonomousWeapons_Disapproved</li>
       </li>
-      <li>Fungus_DontCare</li>
     </requireOne>
     <thingStyleCategories>
       <li>
