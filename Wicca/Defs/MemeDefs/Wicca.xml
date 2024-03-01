@@ -27,6 +27,9 @@
         <li>memeLeaderNoun->Head Witch</li>
       </rulesStrings>
     </generalRules>
+    <agreeableTraits>
+      <li>Kind</li>
+    </agreeableTraits>
     <descriptionMaker>
       <!--constants>
 				<li>

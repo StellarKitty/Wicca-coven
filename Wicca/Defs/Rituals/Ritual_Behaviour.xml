@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<RitualBehaviorDef>
+    <defName>Initiation</defName>
+    <workerClass>RitualBehaviorWorker_Conversion</workerClass>
+    <durationTicks>5000</durationTicks>
+    <preceptRequirements>
+        <li Class="PreceptRequirement_Altar"/>
+    </preceptRequirements>
+    <roles Inherit="False">
+        <li Class="RitualRoleTag">
+            <label>initiator</label>
+            <id>moralist</id>
+            <tag>Moralist</tag>
+            <precept>IdeoRole_Moralist</precept>
+            <required>True</required>
+            <maxCount>1</maxCount>
+            <countsAsParticipant>False</countsAsParticipant>
+            <allowChild>false</allowChild>
+        </li>
+        <li Class="RitualRoleConvertee">
+            <label>convertee</label>
+            <id>convertee</id>
+            <maxCount>1</maxCount>
+            <required>True</required>
+            <allowOtherIdeos>True</allowOtherIdeos>
+            <countsAsParticipant>False</countsAsParticipant>
+        </li>
+    </roles>
+        <stages>
+            <li Class="RitualStage_InteractWithRole">
+                <defaultDuty>Spectate</defaultDuty>
+                <targetId>convertee</targetId>
+                <endTriggers>
+                    <li Class="StageEndTrigger_PawnDeliveredOrNotValid"/>
+                </endTriggers>
+                <failTriggers>
+                    <li Class="StageFailTrigger_TargetPawnUnreachable">
+                        <takerId>moralist</takerId>
+                        <takeeId>convertee</takeeId>
+                        <desc>Prisoner is not reachable.</desc>
+                    </li>
+                    <li Class="StageFailTrigger_PawnAsleep">
+                        <desc>escort asleep</desc>
+                        <pawnId>moralist</pawnId>
+                    </li>
+                </failTriggers>
+                <roleBehaviors>
+                    <li>
+                        <roleId>moralist</roleId>
+                        <dutyDef>DeliverPawnToAltar</dutyDef>
+                    </li>
+                    <li>
+                        <roleId>convertee</roleId>
+                        <dutyDef>ArriveToCell</dutyDef>
+                        <customPositions>
+                            <li Class="RitualPosition_InFrontThingCenter"/>
+                        </customPositions>
+                    </li>
+                </roleBehaviors>
+            </li>
+            <li>
+                <defaultDuty>Spectate</defaultDuty>
+                <endTriggers>
+                    <li Class="StageEndTrigger_DurationPercentage">
+                        <percentage>1</percentage>
+                    </li>
+                </endTriggers>
+                <roleBehaviors>
+                    <li>
+                        <roleId>moralist</roleId>
+                        <dutyDef>SpeakOnCellFacingSpectators</dutyDef>
+                        <speakerInteraction>Speech_Conversion</speakerInteraction>
+                        <customPositions>
+                            <li Class="RitualPosition_Lectern">
+                                <maxDistanceToFocus>5</maxDistanceToFocus>
+                            </li>
+                            <li Class="RitualPosition_OnInteractionCell"/>
+                        </customPositions>
+                    </li>
+                    <li>
+                        <roleId>convertee</roleId>
+                        <dutyDef>LayDownAwake</dutyDef>
+                    </li>
+                </roleBehaviors>
+            </li>
+        </stages>
+</RitualBehaviorDef>
+
+</Defs>
