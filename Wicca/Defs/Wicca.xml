@@ -4,7 +4,7 @@
   <MemeDef>
     <defName>Wicca</defName>
     <label>wicca</label>
-    <description>Wiccans believe in a harmony between humans and Animals. They do everything to protect nature from being destroyed.</description>
+    <description>Wiccans believe in a harmony between humans and Animals. They will do everything to protect nature from being destroyed.</description>
     <iconPath>UI/wicca</iconPath>
     <groupDef>Primacy</groupDef>
     <impact>2</impact>
@@ -28,13 +28,13 @@
       </rulesStrings>
     </generalRules>
     <descriptionMaker>
-      <constants>
+      <!--constants>
 				<li>
 					<key>structure_esotericism</key>
 					<value>true</value>
-          <priority>1</priority>
+          <priority>4</priority>
 				</li>
-			</constants>
+			</constants-->
       <rules>
         <rulesStrings>
         </rulesStrings>
@@ -42,7 +42,7 @@
     </descriptionMaker>
     <symbolPacks>
       <li>
-        <ideoName>Coven</ideoName>
+        <ideoName>the Coven</ideoName>
         <theme>wiccan</theme>
         <adjective>wiccan</adjective>
         <member>Wiccan</member>
@@ -72,6 +72,10 @@
     <thingStyleCategories>
       <li>
         <category>VME_Esotericism</category>
+        <priority>10</priority>
+      </li>
+      <li>
+        <category>Animalist</category>
         <priority>1</priority>
       </li>
     </thingStyleCategories>
