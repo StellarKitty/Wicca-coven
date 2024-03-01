@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
-
+<RitualOutcomeEffectDef>
     <defName>Initiation</defName>
     <description>
 If it goes well, target's ideoligion certainty will be reduced or they will convert.
