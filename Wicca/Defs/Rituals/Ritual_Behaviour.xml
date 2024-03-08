@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
+<Defs>
 <Operation Class="PatchOperationAdd">
 <xpath>Data/Ideology/Defs/Rituals/Ritual_Behaviors[defName="Defs"]</xpath>
 <RitualBehaviorDef>
     <defName>Initiation</defName>
     <workerClass>RitualBehaviorWorker_Initiation</workerClass>
-    <durationTicks>5000</durationTicks>
+    <durationTicks>7500</durationTicks>
     <preceptRequirements>
         <li Class="PreceptRequirement_Altar"/>
     </preceptRequirements>
@@ -90,3 +90,4 @@
 </RitualBehaviorDef>
 
 </Operation>
+</Defs>

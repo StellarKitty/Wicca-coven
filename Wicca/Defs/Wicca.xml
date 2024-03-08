@@ -6,14 +6,14 @@
     <label>wicca</label>
     <description>Wiccans believe in a harmony between humans and Animals. They do everything to protect nature from being destroyed.</description>
     <iconPath>Wicca/Textures/UI/wicca.png</iconPath>
-    <!--groupDef>Primacy</groupDef-->
+    <groupDef>Primacy</groupDef>
     <impact>2</impact>
     <worshipRoomLabel>Temple</worshipRoomLabel>
     <renderOrder>50</renderOrder>
     <veneratedAnimalsCountOffset>1</veneratedAnimalsCountOffset>
     <!--exclusionTags>
-      <li>Primacy</li-->
-    </exclusionTags>
+      <li>Primacy</li>
+    </exclusionTags-->
     <deityCount>2</deityCount>
     <generalRules>
       <rulesStrings>
@@ -52,6 +52,7 @@
         <li>MeatEating_Horrible</li>
         <li>MeatEating_Disapproved</li>
       </li>
+    </requireOne>
     <thingStyleCategories>
       <li>
         <category>VME_Esotericism</category>

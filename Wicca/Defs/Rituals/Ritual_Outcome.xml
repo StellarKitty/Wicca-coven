@@ -5,7 +5,7 @@
     <description>
 If it goes well, target's ideoligion certainty will be reduced or they will convert.
     </description>
-    <workerClass>RitualOutcomeEffectWorker_Conversion</workerClass>
+    <workerClass>RitualOutcomeEffectWorker_Initiation</workerClass>
     <comps>
         <li Class="RitualOutcomeComp_RoomStat">
             <label>room impressiveness</label>
