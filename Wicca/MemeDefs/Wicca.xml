@@ -39,11 +39,6 @@
     </symbolPacks>
     <requireOne>
       <li>
-        <li>AnimalSlaughter_Prohibited</li>
-        <li>AnimalSlaughter_Horrible</li>
-        <li>AnimalSlaughter_Disapproved</li>
-      </li>
-      <li>
         <li>KillingInnocentAnimals_Abhorrent</li>
         <li>KillingInnocentAnimals_Horrible</li>
       </li>
