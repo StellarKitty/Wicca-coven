@@ -20,6 +20,9 @@
             <packageId>VanillaExpanded.VMemesE</packageId>
             <displayName>Vanilla Ideology Expanded - Memes and Structures</displayName>
         </li>
+        <li>
+            <packageId>thesepeople.RitualAttachableOutcomes</packageId>
+            <displayName>Custom Ritual Framework</displayName>
     </modDependencies>
 
     <forceLoadAfter>
