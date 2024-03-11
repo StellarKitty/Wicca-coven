@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- I basically took this code from the Ritual Framework 
+- https://github.com/thesePeople/CustomRitualFramework/blob/main/1.4/Defs/Custom_Ritual_Example.xml - 
+and changed it to my ritual-->
+
 <Defs>
   <PreceptDef>
     
@@ -32,7 +37,7 @@
 
 		<ritualBehavior>InitiationBehavior</ritualBehavior>
 		<shortDescOverride>coven initiation</shortDescOverride>
-		<descOverride>A speaker talks for a while, then the Initiatee lies before the speaker and is welcomed into the Coven</descOverride>
+		<descOverride>A speaker talks for a while, then the Initiatee lies before the speaker and is welcomed into the Coven.</descOverride>
 
 		<ritualOutcomeEffect>InitiationOutcome</ritualOutcomeEffect>
 		
@@ -45,7 +50,7 @@
 				<mustBePlayerIdeo>true</mustBePlayerIdeo>
 			</li>
 		</ritualObligationTriggers>
-		<ritualObligationTargetFilter>GatheringSpotOrAltar</ritualObligationTargetFilter>
+		<ritualObligationTargetFilter>RitualSpotIdeogramOrAltar</ritualObligationTargetFilter>
 		<tags>
 			<li>Coven</li>
 		</tags>
@@ -56,28 +61,29 @@
 
 	 <RitualBehaviorDef>
 		<defName>InitiationBehavior</defName>
-		<durationTicks>4500</durationTicks>
+		<durationTicks>6250</durationTicks>
 		<spectatorsLabel>Spectators</spectatorsLabel>
 		<spectatorGerund>participate</spectatorGerund>
 		
-		<roles>
+		<roles Inherit="False">
             <li Class="RitualRoleTag">
-				<label>moralist</label>
-				<id>moralist</id>
-				<tag>Moralist</tag>
-				<precept>IdeoRole_Moralist</precept>
-				<required>True</required>
-				<substitutable>false</substitutable>
+				<label>speaker</label>
+				<id>speaker</id>
+				<tag>Leader</tag>
+				<precept>IdeoRole_Leader</precept>
+				<required>false</required>
+				<substitutable>true</substitutable>
 				<maxCount>1</maxCount>
 				<countsAsParticipant>False</countsAsParticipant>
 			</li>
-			<li Class="RitualRoleColonist">
+			<li Class="RitualRoleConvertee">
 				<label>initiatee</label>
 				<id>initiatee</id>
 				<required>True</required>
 				<substitutable>true</substitutable>
 				<maxCount>1</maxCount>
 				<countsAsParticipant>False</countsAsParticipant>
+				<allowOtherIdeos>true</allowOtherIdeos>
 			</li>
 		</roles>
 		
@@ -90,14 +96,14 @@
 				</endTriggers>
 				<failTriggers>
 				  <li Class="StageFailTrigger_TargetPawnUnreachable">
-					<takerId>moralist</takerId>
+					<takerId>speaker</takerId>
 					<takeeId>initiatee</takeeId>
 					<desc>Afflicted is not reachable.</desc>
 				  </li>
 				</failTriggers>
 				<roleBehaviors>
 				  <li>
-					<roleId>moralist</roleId>
+					<roleId>speaker</roleId>
 					<dutyDef>DeliverPawnToAltar</dutyDef>
 				  </li>
 				  <li>
@@ -117,14 +123,18 @@
 					<percentage>1</percentage>
 				  </li>
 				</endTriggers>
+				<postAction Class="RitualStageAction_Message">
+					<text>{0}: The speech is over, and the party is beginning.</text>
+					<messageTypeDef>NeutralEvent</messageTypeDef>
+				</postAction>
 				<roleBehaviors>
 				  <li>
-					<roleId>moralist</roleId>
+					<roleId>leader</roleId>
 					<dutyDef>SpeakOnCellFacingSpectators</dutyDef>
 					<speakerInteraction>Speech_Conversion</speakerInteraction>
 					<customPositions>
 					  <li Class="RitualPosition_Lectern">
-						<maxDistanceToFocus>5</maxDistanceToFocus>
+						<maxDistanceToFocus>7</maxDistanceToFocus>
 					  </li>
 					  <li Class="RitualPosition_OnInteractionCell" />
 					</customPositions>
@@ -134,6 +144,14 @@
 					<dutyDef>LayDownAwake</dutyDef>
 				  </li>
 				</roleBehaviors>
+			</li>
+			<li>
+				<defaultDuty>Party</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.7</percentage>
+					</li>
+				</endTriggers>
 			</li>
 		 </stages>
 	  </RitualBehaviorDef>
