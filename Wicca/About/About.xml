@@ -26,6 +26,9 @@
             <displayName>Vanilla Ideology Expanded - Memes and Structures</displayName>
             <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2636329500</steamWorkshopUrl>
         </li>
+        <li>
+            <packageId>thesepeople.RitualAttachableOutcomes</packageId>
+            <displayName>Custom Ritual Framework</displayName>
     </modDependencies>
 
     <forceLoadAfter>

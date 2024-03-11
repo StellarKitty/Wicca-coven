@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- I basically took this code from the Ritual Framework 
+- https://github.com/thesePeople/CustomRitualFramework/blob/main/1.4/Defs/Custom_Ritual_Example.xml - 
+and changed it to my ritual-->
+
+<Defs>
+  <PreceptDef>
+    
+	<defName>Initiation</defName>
+	<label>coven initiation</label>
+    
+	<preceptInstanceCountCurve>
+		<points>
+			<li>(0.6, 0)</li>
+			<li>(1.0, 1)</li>
+      </points>
+	  </preceptInstanceCountCurve>
+	  
+	<description>A Ritual to welcome someone into the Coven.</description>
+    <issue>Ritual</issue>
+    <impact>Medium</impact>
+    <iconPath>UI/</iconPath>
+    <preceptClass>Precept_Ritual</preceptClass>
+    <ritualPatternBase>Initiation</ritualPatternBase>
+    <allowDuplicates>true</allowDuplicates>
+    <countsTowardsPreceptLimit>true</countsTowardsPreceptLimit>
+    <ignoreLimitsInEditMode>true</ignoreLimitsInEditMode>
+    <receivesExpectationsQualityOffset>true</receivesExpectationsQualityOffset>
+  
+  </PreceptDef>
+  
+  	<RitualPatternDef>
+	
+		<defName>Initiation</defName>
+		<ritualFreeStartIntervalDaysRange>0.1</ritualFreeStartIntervalDaysRange>
+
+		<ritualBehavior>InitiationBehavior</ritualBehavior>
+		<shortDescOverride>coven initiation</shortDescOverride>
+		<descOverride>A speaker talks for a while, then the Initiatee lies before the speaker and is welcomed into the Coven.</descOverride>
+
+		<ritualOutcomeEffect>InitiationOutcome</ritualOutcomeEffect>
+		
+		<nameMaker>NamerRitualFestival</nameMaker>
+		<ritualExpectedDesc>Every once in a while, {MEMBERS} celebrate {RITUAL_labelDef}.</ritualExpectedDesc>
+		<iconPathOverride>UI/</iconPathOverride>
+		<canStartAnytime>true</canStartAnytime>
+		<ritualObligationTriggers>
+			<li Class="RitualObligationTrigger_DateProperties">
+				<mustBePlayerIdeo>true</mustBePlayerIdeo>
+			</li>
+		</ritualObligationTriggers>
+		<ritualObligationTargetFilter>RitualSpotIdeogramOrAltar</ritualObligationTargetFilter>
+		<tags>
+			<li>Coven</li>
+		</tags>
+		<patternGroupTag>Initiation</patternGroupTag>
+		
+	</RitualPatternDef>
+	
+
+	 <RitualBehaviorDef>
+		<defName>InitiationBehavior</defName>
+		<durationTicks>6250</durationTicks>
+		<spectatorsLabel>Spectators</spectatorsLabel>
+		<spectatorGerund>participate</spectatorGerund>
+		
+		<roles Inherit="False">
+            <li Class="RitualRoleTag">
+				<label>speaker</label>
+				<id>speaker</id>
+				<tag>Leader</tag>
+				<precept>IdeoRole_Leader</precept>
+				<required>false</required>
+				<substitutable>true</substitutable>
+				<maxCount>1</maxCount>
+				<countsAsParticipant>False</countsAsParticipant>
+			</li>
+			<li Class="RitualRoleConvertee">
+				<label>initiatee</label>
+				<id>initiatee</id>
+				<required>True</required>
+				<substitutable>true</substitutable>
+				<maxCount>1</maxCount>
+				<countsAsParticipant>False</countsAsParticipant>
+				<allowOtherIdeos>true</allowOtherIdeos>
+			</li>
+		</roles>
+		
+		<stages>
+			<li Class="RitualStage_InteractWithRole">
+				<defaultDuty>Spectate</defaultDuty>
+				<targetId>initiatee</targetId>
+				<endTriggers>
+				  <li Class="StageEndTrigger_PawnDeliveredOrNotValid"/>
+				</endTriggers>
+				<failTriggers>
+				  <li Class="StageFailTrigger_TargetPawnUnreachable">
+					<takerId>speaker</takerId>
+					<takeeId>initiatee</takeeId>
+					<desc>Afflicted is not reachable.</desc>
+				  </li>
+				</failTriggers>
+				<roleBehaviors>
+				  <li>
+					<roleId>speaker</roleId>
+					<dutyDef>DeliverPawnToAltar</dutyDef>
+				  </li>
+				  <li>
+					<roleId>initiatee</roleId>
+					<dutyDef>ArriveToCell</dutyDef>
+					<customPositions>
+					  <li Class="RitualPosition_InFrontThingCenter"/>
+					</customPositions>
+				  </li>
+				</roleBehaviors>
+			</li>
+
+			<li>
+				<defaultDuty>Spectate</defaultDuty>
+				<endTriggers>
+				  <li Class="StageEndTrigger_DurationPercentage">
+					<percentage>1</percentage>
+				  </li>
+				</endTriggers>
+				<postAction Class="RitualStageAction_Message">
+					<text>{0}: The speech is over, and the party is beginning.</text>
+					<messageTypeDef>NeutralEvent</messageTypeDef>
+				</postAction>
+				<roleBehaviors>
+				  <li>
+					<roleId>leader</roleId>
+					<dutyDef>SpeakOnCellFacingSpectators</dutyDef>
+					<speakerInteraction>Speech_Conversion</speakerInteraction>
+					<customPositions>
+					  <li Class="RitualPosition_Lectern">
+						<maxDistanceToFocus>7</maxDistanceToFocus>
+					  </li>
+					  <li Class="RitualPosition_OnInteractionCell" />
+					</customPositions>
+				  </li>
+				  <li>
+					<roleId>initiatee</roleId>
+					<dutyDef>LayDownAwake</dutyDef>
+				  </li>
+				</roleBehaviors>
+			</li>
+			<li>
+				<defaultDuty>Party</defaultDuty>
+				<endTriggers>
+					<li Class="StageEndTrigger_DurationPercentage">
+						<percentage>0.7</percentage>
+					</li>
+				</endTriggers>
+			</li>
+		 </stages>
+	  </RitualBehaviorDef>
+  
+  
+  <RitualOutcomeEffectDef>
+    <defName>InitiationOutcome</defName>
+    <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days.</description>
+
+	<!-- use this to specify using a custom outcome -->
+	<workerClass>TPRitualAttachableOutcomes.RitualOutcomeEffectWorker_FromQuality_TP_Custom</workerClass>
+
+    <allowAttachableOutcome>false</allowAttachableOutcome>
+    <comps>
+		<li Class="RitualOutcomeComp_PawnStatScaled">
+			<label>{PAWN_labelShort}'s social impact</label>
+			<labelAbstract>speaker's social impact</labelAbstract>
+			<roleId>moralist</roleId>
+			<statDef>SocialImpact</statDef>
+			<curve>
+				<points>
+				<li>(0.2, 0.0)</li>
+				<li>(0.6, 0.18)</li>
+				<li>(1.0, 0.25)</li>
+				<li>(1.5, 0.3)</li>
+				</points>
+			</curve>
+		</li>
+
+	<li Class="RitualOutcomeComp_BuildingOfDefUsed">
+        <def>Lectern</def>
+
+        <qualityOffset>0.2</qualityOffset>
+        <maxHorDistFromTarget>5</maxHorDistFromTarget>
+      </li>
+
+      <li Class="RitualOutcomeComp_RitualSeatPresent">
+        <qualityOffset>0.2</qualityOffset>
+      </li>
+      <li Class="RitualOutcomeComp_ParticipantCount">
+        <label>participant count</label>
+        <curve>
+          <points>
+            <li>(1,  0.0)</li>
+            <li>(5,  0.24)</li>
+            <li>(10, 0.35)</li>
+          </points>
+        </curve>
+      </li>
+      <li Class="RitualOutcomeComp_RitualTargetDefs">
+        <allowAltars>true</allowAltars>
+        <label>started at altar</label>
+        <expectedThingLabelTip>an altar</expectedThingLabelTip>
+        <qualityOffset>0.15</qualityOffset>
+      </li>
+    </comps>
+    <outcomeChances>
+      <li>
+        <label>Boring</label>
+        <chance>0.15</chance>
+		<ideoCertaintyOffset>-0.5</ideoCertaintyOffset>
+        <memory>BoringInitiation</memory>
+        <description>The {0} was boring. There was little passion, like the speaker didn't want the Initiatee in the Coven.</description>
+        <positivityIndex>-1</positivityIndex>
+      </li>
+      <li>
+        <label>Satisfying</label>
+        <chance>0.65</chance>
+		<ideoCertaintyOffset>-1</ideoCertaintyOffset>
+        <memory>SatisfyingInitiation</memory>
+        <description>The {0} was satisfying. We welcomed the Initiatee into the Coven.</description>
+        <positivityIndex>1</positivityIndex>
+      </li>
+      <li>
+        <label>Spectacular</label>
+        <chance>0.2</chance>
+		<ideoCertaintyOffset>-1</ideoCertaintyOffset>
+        <memory>SpectacularInitation</memory>
+        <description>The {0} was spectacular! We welcomed the Initiatee warmly into the Coven!</description>
+        <positivityIndex>2</positivityIndex>
+      </li>
+    </outcomeChances>
+	
+  </RitualOutcomeEffectDef>
+  
+
+  <ThoughtDef>
+    <defName>BoringInitiation</defName>
+    <thoughtClass>Thought_AttendedRitual</thoughtClass>
+    <durationDays>6</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>boring Initiation</label>
+        <description>It was like people didn't really care</description>
+        <baseMoodEffect>-1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>SatisfyingInitiation</defName>
+    <thoughtClass>Thought_AttendedRitual</thoughtClass>
+    <durationDays>6</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>satisfying Initiation</label>
+        <description>We welcomed the Initiatee</description>
+        <baseMoodEffect>1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThoughtDef>
+    <defName>SpectacularInitation</defName>
+    <thoughtClass>Thought_AttendedRitual</thoughtClass>
+    <durationDays>6</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>spectacular Initiation</label>
+        <description>We heartly welcomed the Initiatee into the Coven!</description>
+        <baseMoodEffect>3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  
+</Defs>
