@@ -105,17 +105,17 @@ and changed it into my ritual-->
 				  </li>
 				</failTriggers>
 				<roleBehaviors>
-				  <li>
-					<roleId>speaker</roleId>
-					<dutyDef>DeliverPawnToAltar</dutyDef>
-				  </li>
-				  <li>
-					<roleId>initiatee</roleId>
-					<dutyDef>ArriveToCell</dutyDef>
-					<customPositions>
-					  <li Class="RitualPosition_InFrontThingCenter"/>
-					</customPositions>
-				  </li>
+					<li>
+						<roleId>initiatee</roleId>
+						<dutyDef>ArriveToCell</dutyDef>
+						<customPositions>
+						<li Class="RitualPosition_InFrontThingCenter"/>
+						</customPositions>
+					</li>
+					<li>
+						<roleId>speaker</roleId>
+						<dutyDef>DeliverPawnToAltar</dutyDef>
+					</li>
 				</roleBehaviors>
 			</li>
 
@@ -123,7 +123,7 @@ and changed it into my ritual-->
 				<defaultDuty>Spectate</defaultDuty>
 				<endTriggers>
 				  <li Class="StageEndTrigger_DurationPercentage">
-					<percentage>1</percentage>
+					<percentage>0.3</percentage>
 				  </li>
 				</endTriggers>
 				<postAction Class="RitualStageAction_Message">
@@ -139,12 +139,12 @@ and changed it into my ritual-->
 					  <li Class="RitualPosition_Lectern">
 						<maxDistanceToFocus>7</maxDistanceToFocus>
 					  </li>
-					  <li Class="RitualPosition_OnInteractionCell" />
+					  <li Class="RitualPosition_BehindThingCenter" />
 					</customPositions>
 				  </li>
 				  <li>
 					<roleId>initiatee</roleId>
-					<dutyDef>LayDownAwake</dutyDef>
+					<dutyDef>Idle</dutyDef>
 				  </li>
 				</roleBehaviors>
 			</li>
@@ -186,8 +186,7 @@ and changed it into my ritual-->
 
 	<li Class="RitualOutcomeComp_BuildingOfDefUsed">
         <def>Lectern</def>
-
-        <qualityOffset>0.2</qualityOffset>
+		<qualityOffset>0.2</qualityOffset>
         <maxHorDistFromTarget>5</maxHorDistFromTarget>
       </li>
 
@@ -226,7 +225,7 @@ and changed it into my ritual-->
 		<ideoCertaintyOffset>-1</ideoCertaintyOffset>
         <memory>SatisfyingInitiation</memory>
         <description>The {0} was satisfying. We welcomed the Initiatee into the Coven.</description>
-        <positivityIndex>1</positivityIndex>
+        <positivityIndex>2</positivityIndex>
       </li>
       <li>
         <label>Spectacular</label>
@@ -234,7 +233,7 @@ and changed it into my ritual-->
 		<ideoCertaintyOffset>-1</ideoCertaintyOffset>
         <memory>SpectacularInitation</memory>
         <description>The {0} was spectacular! We welcomed the Initiatee warmly into the Coven!</description>
-        <positivityIndex>2</positivityIndex>
+        <positivityIndex>5</positivityIndex>
       </li>
     </outcomeChances>
 	
@@ -264,7 +263,7 @@ and changed it into my ritual-->
       <li>
         <label>satisfying Initiation</label>
         <description>We welcomed the Initiatee</description>
-        <baseMoodEffect>1</baseMoodEffect>
+        <baseMoodEffect>2</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
@@ -278,7 +277,7 @@ and changed it into my ritual-->
       <li>
         <label>spectacular Initiation</label>
         <description>That was a warm welcome!</description>
-        <baseMoodEffect>3</baseMoodEffect>
+        <baseMoodEffect>5</baseMoodEffect>
       </li>
     </stages>
   </ThoughtDef>
