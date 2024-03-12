@@ -15,6 +15,7 @@
       <li>Primacy</li>
       <li>VME_NotRaiders</li>
       <li>FleshAugmentation</li>
+      <li>VME_TooViolent</li>
     </exclusionTags>
     <deityCount>2</deityCount>
     <generalRules>
@@ -27,6 +28,9 @@
         <li>memeLeaderNoun->Head Witch</li>
       </rulesStrings>
     </generalRules>
+    <!--agreeableMemes>
+      <li>VME_Vegan</li>
+    </agreeableMemes-->
     <agreeableTraits>
       <li>Kind</li>
     </agreeableTraits>
@@ -57,9 +61,7 @@
         <li>KillingInnocentAnimals_Horrible</li>
       </li>
       <li>
-        <li>MeatEating_Abhorrent</li>
-        <li>MeatEating_Horrible</li>
-        <li>MeatEating_Disapproved</li>
+        <li>RoughLiving_Welcomed</li>
       </li>
       <li>
         <li>AutonomousWeapons_Prohibited</li>
@@ -67,6 +69,10 @@
         <li>AutonomousWeapons_Disapproved</li>
       </li>
     </requireOne>
+    <!--selectOneOrNone>
+      <noneChance>0.6</noneChance>
+        <precept>Cannibalism_Acceptable</precept>
+    </selectOneOrNone-->
     <thingStyleCategories>
       <li>
         <category>VME_Esotericism</category>
