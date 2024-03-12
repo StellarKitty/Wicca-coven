@@ -2,7 +2,7 @@
 
 <!-- I basically took this code from the Ritual Framework 
 - https://github.com/thesePeople/CustomRitualFramework/blob/main/1.4/Defs/Custom_Ritual_Example.xml - 
-and changed it to my ritual-->
+and changed it into my ritual-->
 
 <Defs>
   <PreceptDef>
@@ -20,11 +20,14 @@ and changed it to my ritual-->
 	<description>A Ritual to welcome someone into the Coven.</description>
     <issue>Ritual</issue>
     <impact>Medium</impact>
-    <iconPath>UI/</iconPath>
+    <iconPath>UI/Icons/Rituals/CelebrationPartyDanceDrums</iconPath>
     <preceptClass>Precept_Ritual</preceptClass>
     <ritualPatternBase>Initiation</ritualPatternBase>
     <allowDuplicates>true</allowDuplicates>
     <countsTowardsPreceptLimit>true</countsTowardsPreceptLimit>
+	<requiredMemes>
+		<li>Wicca</li>
+	</requiredMemes>
     <ignoreLimitsInEditMode>true</ignoreLimitsInEditMode>
     <receivesExpectationsQualityOffset>true</receivesExpectationsQualityOffset>
   
@@ -36,14 +39,14 @@ and changed it to my ritual-->
 		<ritualFreeStartIntervalDaysRange>0.1</ritualFreeStartIntervalDaysRange>
 
 		<ritualBehavior>InitiationBehavior</ritualBehavior>
-		<shortDescOverride>coven initiation</shortDescOverride>
+		<shortDescOverride>Coven Initiation</shortDescOverride>
 		<descOverride>A speaker talks for a while, then the Initiatee lies before the speaker and is welcomed into the Coven.</descOverride>
 
 		<ritualOutcomeEffect>InitiationOutcome</ritualOutcomeEffect>
 		
 		<nameMaker>NamerRitualFestival</nameMaker>
 		<ritualExpectedDesc>Every once in a while, {MEMBERS} celebrate {RITUAL_labelDef}.</ritualExpectedDesc>
-		<iconPathOverride>UI/</iconPathOverride>
+		<iconPathOverride>UI/Icons/Rituals/CelebrationPartyDanceDrums</iconPathOverride>
 		<canStartAnytime>true</canStartAnytime>
 		<ritualObligationTriggers>
 			<li Class="RitualObligationTrigger_DateProperties">
@@ -246,7 +249,7 @@ and changed it to my ritual-->
     <stages>
       <li>
         <label>boring Initiation</label>
-        <description>It was like people didn't really care</description>
+        <description>It was like no one didn't really care</description>
         <baseMoodEffect>-1</baseMoodEffect>
       </li>
     </stages>
@@ -274,7 +277,7 @@ and changed it to my ritual-->
     <stages>
       <li>
         <label>spectacular Initiation</label>
-        <description>We heartly welcomed the Initiatee into the Coven!</description>
+        <description>That was a warm welcome!</description>
         <baseMoodEffect>3</baseMoodEffect>
       </li>
     </stages>
