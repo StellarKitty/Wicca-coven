@@ -29,6 +29,7 @@
         <li>
             <packageId>thesepeople.RitualAttachableOutcomes</packageId>
             <displayName>Custom Ritual Framework</displayName>
+            <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2561617361</steamWorkshopUrl>
     </modDependencies>
 
     <forceLoadAfter>
@@ -36,7 +37,8 @@
     </forceLoadAfter>
 
     <description>This mod adds another Meme I couldn't find in the Steam Workshop. 
-It works best with Oskar's Vanilla Ideology Expanded, for the mod refers to some of that code. Also, you obviously have to have Ideology installed.
+It works best with Oskar's Vanilla Ideology Expanded and thesepeople's Custom Ritual Framework, for the mod refers to some of that code.
+Also, you obviously have to have Ideology installed.
 The mod lets you make your own Wicca Coven, trying to preserve and protect nature. 
     </description>
 </ModMetaData>
