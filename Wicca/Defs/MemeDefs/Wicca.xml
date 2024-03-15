@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <MemeGroupDef>
+    <defName>WiccaCoven</defName>
+    <drawOffset>0.3, 0</drawOffset>
+    <renderWithGap>true</renderWithGap>
+  </MemeGroupDef>
 
   <MemeDef>
     <defName>Wicca</defName>
@@ -13,9 +18,9 @@
     <veneratedAnimalsCountOffset>1</veneratedAnimalsCountOffset>
     <exclusionTags>
       <li>Primacy</li>
-      <li>VME_NotRaiders</li>
-      <li>FleshAugmentation</li>
-      <li>VME_TooViolent</li>
+      <li>GroupRelation</li>
+      <li>WiccaOrTranshumanist</li>
+      <li>WiccaOrRaider</li>
     </exclusionTags>
     <deityCount>2</deityCount>
     <generalRules>

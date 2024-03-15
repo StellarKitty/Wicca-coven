@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/MemeDef[defName="Transhumanist"]/exclusionTags/li[text()]</xpath>
+        <value>
+            <li>WiccaOrTranshumanist</li>
+        </value>
+    </Operation>
+    <Operation Class="PatchOperationInsert">
+        <xpath>Defs/MemeDef[defName="Raider"]/exclusionTags/li[text()]</xpath>
+        <value>
+            <li>WiccaOrRaider</li>
+        </value>
+    </Operation>
+</Patch>
