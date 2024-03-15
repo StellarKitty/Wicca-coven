@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>
+  <MemeGroupDef>
+    <defName>WiccaCoven</defName>
+    <drawOffset>0.3, 0</drawOffset>
+    <renderWithGap>true</renderWithGap>
+  </MemeGroupDef>
 
   <MemeDef>
     <defName>Wicca</defName>
@@ -13,8 +18,9 @@
     <veneratedAnimalsCountOffset>1</veneratedAnimalsCountOffset>
     <exclusionTags>
       <li>Primacy</li>
-      <li>VME_NotRaiders</li>
-      <li>FleshAugmentation</li>
+      <li>GroupRelation</li>
+      <li>WiccaOrTranshumanist</li>
+      <li>WiccaOrRaider</li>
     </exclusionTags>
     <deityCount>2</deityCount>
     <generalRules>
@@ -27,6 +33,9 @@
         <li>memeLeaderNoun->Head Witch</li>
       </rulesStrings>
     </generalRules>
+    <!--agreeableMemes>
+      <li>VME_Vegan</li>
+    </agreeableMemes-->
     <agreeableTraits>
       <li>Kind</li>
     </agreeableTraits>
@@ -65,6 +74,10 @@
         <li>AutonomousWeapons_Disapproved</li>
       </li>
     </requireOne>
+    <!--selectOneOrNone>
+      <noneChance>0.6</noneChance>
+        <precept>Cannibalism_Acceptable</precept>
+    </selectOneOrNone-->
     <thingStyleCategories>
       <li>
         <category>VME_Esotericism</category>
