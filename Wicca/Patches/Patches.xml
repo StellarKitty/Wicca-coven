@@ -1,16 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <Patch>
-    <Operation Class="PatchOperationInsert">
-        <xpath>Defs/MemeDef[defName="Transhumanist"]/exclusionTags/li[text()]</xpath>
-        <value>
-            <li>WiccaOrTranshumanist</li>
-        </value>
+<!-- Adding Exclusion Transhumanist -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/MemeDef[defName="Transhumanist"]/exclusionTags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="Transhumanist"]</xpath>
+            <value>
+                <exclusionTags>
+                    <li>WiccaOrTechnic</li>
+                </exclusionTags>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="Transhumanist"]/exclusionTags</xpath>
+            <value>
+                <li>WiccaOrTechnic</li>
+            </value>
+        </match>
     </Operation>
-    <Operation Class="PatchOperationInsert">
-        <xpath>Defs/MemeDef[defName="Raider"]/exclusionTags/li[text()]</xpath>
-        <value>
-            <li>WiccaOrRaider</li>
-        </value>
+
+<!-- Adding Exclusion Raider -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/MemeDef[defName="Raider"]/exclusionTags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="Raider"]</xpath>
+            <value>
+                <exclusionTags>
+                    <li>WiccaOrRaider</li>
+                </exclusionTags>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="Raider"]/exclusionTags</xpath>
+            <value>
+                <li>WiccaOrRaider</li>
+            </value>
+        </match>
     </Operation>
+
+<!-- Adding Exclusion Corporate Structure -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/MemeDef[defName="VME_Structure_Corporate"]/exclusionTags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="VME_Structure_Corporate"]</xpath>
+            <value>
+                <exclusionTags>
+                    <li>WiccaOrCorporate</li>
+                </exclusionTags>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="VME_Structure_Corporate"]/exclusionTags</xpath>
+            <value>
+                <li>WiccaOrCorporate</li>
+            </value>
+        </match>
+    </Operation>
+
+<!-- Adding Exclusion Authoritarian Structure -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/MemeDef[defName="VME_Structure_Authoritarianism"]/exclusionTags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="VME_Structure_Authoritarianism"]</xpath>
+            <value>
+                <exclusionTags>
+                    <li>WiccaOrAuthoritarian</li>
+                </exclusionTags>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="VME_Structure_Authoritarianism"]/exclusionTags</xpath>
+            <value>
+                <li>WiccaOrAuthoritarian</li>
+            </value>
+        </match>
+    </Operation>
+
+<!-- Adding Exclusion Progressive -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/MemeDef[defName="VME_Progressive"]/exclusionTags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="VME_Progressive"]</xpath>
+            <value>
+                <exclusionTags>
+                    <li>WiccaOrProgress</li>
+                </exclusionTags>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="VME_Progressive"]/exclusionTags</xpath>
+            <value>
+                <li>WiccaOrProgress</li>
+            </value>
+        </match>
+    </Operation>
+
+<!-- Adding Exclusion Supremacist -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/MemeDef[defName="Supremacist"]/exclusionTags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="Supremacist"]</xpath>
+            <value>
+                <exclusionTags>
+                    <li>WiccaOrSupremacist</li>
+                </exclusionTags>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="Supremacist"]/exclusionTags</xpath>
+            <value>
+                <li>WiccaOrSupremacist</li>
+            </value>
+        </match>
+    </Operation>
+
+<!-- Adding Exclusion BloodCourt -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/MemeDef[defName="VME_BloodCourt"]/exclusionTags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="VME_BloodCourt"]</xpath>
+            <value>
+                <exclusionTags>
+                    <li>WiccaOrBlood</li>
+                </exclusionTags>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="VME_BloodCourt"]/exclusionTags</xpath>
+            <value>
+                <li>WiccaOrBlood</li>
+            </value>
+        </match>
+    </Operation>
+
+<!-- Adding Exclusion Violent Conversion -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/MemeDef[defName="VME_ViolentConversion"]/exclusionTags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="VME_ViolentConversion"]</xpath>
+            <value>
+                <exclusionTags>
+                    <li>WiccaOrViolence</li>
+                </exclusionTags>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="VME_ViolentConversion"]/exclusionTags</xpath>
+            <value>
+                <li>WiccaOrViolence</li>
+            </value>
+        </match>
+    </Operation>
+
 </Patch>
