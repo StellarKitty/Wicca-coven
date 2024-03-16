@@ -153,4 +153,23 @@
         </match>
     </Operation>
 
+<!-- Adding Exclusion Godlike Emperor -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/MemeDef[defName="VME_GodEmperor"]/exclusionTags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="VME_GodEmperor"]</xpath>
+            <value>
+                <exclusionTags>
+                    <li>NoGodlike</li>
+                </exclusionTags>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="VME_GodEmperor"]/exclusionTags</xpath>
+            <value>
+                <li>NoGodlike</li>
+            </value>
+        </match>
+    </Operation>
+
 </Patch>
