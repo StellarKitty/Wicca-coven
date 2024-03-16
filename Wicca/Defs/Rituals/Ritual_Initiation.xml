@@ -40,7 +40,7 @@ and changed it into my ritual-->
 
 		<ritualBehavior>InitiationBehavior</ritualBehavior>
 		<shortDescOverride>Coven Initiation</shortDescOverride>
-		<descOverride>A speaker talks for a while, then the Initiatee lies before the speaker and is welcomed into the Coven.</descOverride>
+		<descOverride>A speaker talks for a while, then the Initiatee lies before the speaker and is eventually welcomed into the Coven.</descOverride>
 
 		<ritualOutcomeEffect>InitiationOutcome</ritualOutcomeEffect>
 		
@@ -74,8 +74,8 @@ and changed it into my ritual-->
 				<id>speaker</id>
 				<tag>Leader</tag>
 				<precept>IdeoRole_Leader</precept>
-				<required>false</required>
-				<substitutable>true</substitutable>
+				<required>true</required>
+				<substitutable>false</substitutable>
 				<maxCount>1</maxCount>
 				<countsAsParticipant>False</countsAsParticipant>
 			</li>
@@ -126,27 +126,30 @@ and changed it into my ritual-->
 					<percentage>0.3</percentage>
 				  </li>
 				</endTriggers>
-				<postAction Class="RitualStageAction_Message">
-					<text>{0}: The speech is over, and the party is beginning.</text>
-					<messageTypeDef>NeutralEvent</messageTypeDef>
-				</postAction>
 				<roleBehaviors>
 				  <li>
-					<roleId>leader</roleId>
+					<roleId>speaker</roleId>
 					<dutyDef>SpeakOnCellFacingSpectators</dutyDef>
 					<speakerInteraction>Speech_Conversion</speakerInteraction>
 					<customPositions>
 					  <li Class="RitualPosition_Lectern">
-						<maxDistanceToFocus>7</maxDistanceToFocus>
+						<maxDistanceToFocus>5</maxDistanceToFocus>
 					  </li>
 					  <li Class="RitualPosition_BehindThingCenter" />
 					</customPositions>
 				  </li>
 				  <li>
 					<roleId>initiatee</roleId>
-					<dutyDef>Idle</dutyDef>
+					<dutyDef>StandOnCell</dutyDef>
+					<customPositions>
+						<li Class="RitualPosition_OnInteractionCell" />
+					</customPositions>
 				  </li>
-				</roleBehaviors>
+				</roleBehaviors>				
+				<postAction Class="RitualStageAction_Message">
+					<text>{0}: The speech is over, and the party is beginning.</text>
+					<messageTypeDef>NeutralEvent</messageTypeDef>
+				</postAction>
 			</li>
 			<li>
 				<defaultDuty>Party</defaultDuty>
@@ -172,7 +175,7 @@ and changed it into my ritual-->
 		<li Class="RitualOutcomeComp_PawnStatScaled">
 			<label>{PAWN_labelShort}'s social impact</label>
 			<labelAbstract>speaker's social impact</labelAbstract>
-			<roleId>moralist</roleId>
+			<roleId>Leader</roleId>
 			<statDef>SocialImpact</statDef>
 			<curve>
 				<points>
