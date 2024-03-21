@@ -19,9 +19,10 @@
       <li>WiccaOrProgress</li>
       <li>WiccaOrTechnic</li>
       <li>WiccaOrRaider</li>
+      <li>NoGodlike</li>
       <li>WiccaOrAuthoritarian</li>
       <li>WiccaOrCorporate</li>
-      <li>NoGodlike</li>
+      <li>WiccaOrArchist</li>
     </exclusionTags>
     <deityCount>2</deityCount>
     <generalRules>

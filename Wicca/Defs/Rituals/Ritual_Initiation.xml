@@ -147,7 +147,7 @@ and changed it into my ritual-->
 				  </li>
 				</roleBehaviors>				
 				<postAction Class="RitualStageAction_Message">
-					<text>{0}: The speech is over, and the party is beginning.</text>
+					<text>{0}: The speech is over and everyone is socialising.</text>
 					<messageTypeDef>NeutralEvent</messageTypeDef>
 				</postAction>
 			</li>
