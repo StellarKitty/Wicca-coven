@@ -94,10 +94,6 @@
         <li>BodyMod_Abhorrent</li>
       </li>
     </requireOne>
-    <!--selectOneOrNone>
-      <noneChance>0.6</noneChance>
-        <precept>Cannibalism_Acceptable</precept>
-    </selectOneOrNone-->
     <thingStyleCategories>
       <li>
         <category>VME_Esotericism</category>
