@@ -153,4 +153,61 @@
         </match>
     </Operation>
 
+<!-- Adding Exclusion Godlike Emperor -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/MemeDef[defName="VME_GodEmperor"]/exclusionTags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="VME_GodEmperor"]</xpath>
+            <value>
+                <exclusionTags>
+                    <li>NoGodlike</li>
+                </exclusionTags>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="VME_GodEmperor"]/exclusionTags</xpath>
+            <value>
+                <li>NoGodlike</li>
+            </value>
+        </match>
+    </Operation>
+
+<!-- Adding Exclusion Godlike Emperor -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/MemeDef[defName="Structure_Archist"]/exclusionTags</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="Structure_Archist"]</xpath>
+            <value>
+                <exclusionTags>
+                    <li>WiccaOrArchist</li>
+                </exclusionTags>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/MemeDef[defName="Structure_Archist"]/exclusionTags</xpath>
+            <value>
+                <li>WiccaOrArchist</li>
+            </value>
+        </match>
+    </Operation>
+
+<!-- Adding Exclusion Godlike Emperor -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/PreceptDef[defName="VME_BodyMod_OnlyBiological"]/requiredMemes</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/PreceptDef[defName="VME_BodyMod_OnlyBiological"]</xpath>
+            <value>
+                <associatedMemes>
+                    <li>Wicca</li>
+                </associatedMemes>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/PreceptDef[defName="VME_BodyMod_OnlyBiological"]/requiredMemes</xpath>
+            <value>
+                <li>Wicca</li>
+            </value>
+        </match>
+    </Operation>
+
 </Patch>
