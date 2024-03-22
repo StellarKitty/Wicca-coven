@@ -40,7 +40,7 @@ and changed it into my ritual-->
 
 		<ritualBehavior>InitiationBehavior</ritualBehavior>
 		<shortDescOverride>Coven Initiation</shortDescOverride>
-		<descOverride>A speaker talks for a while, then the Initiatee lies before the speaker and is eventually welcomed into the Coven.</descOverride>
+		<descOverride>A speaker talks for a while, during which the Initiatee stands near them and is eventually welcomed into the Coven.</descOverride>
 
 		<ritualOutcomeEffect>InitiationOutcome</ritualOutcomeEffect>
 		
@@ -123,7 +123,7 @@ and changed it into my ritual-->
 				<defaultDuty>Spectate</defaultDuty>
 				<endTriggers>
 				  <li Class="StageEndTrigger_DurationPercentage">
-					<percentage>0.3</percentage>
+					<percentage>0.4</percentage>
 				  </li>
 				</endTriggers>
 				<roleBehaviors>
@@ -155,7 +155,7 @@ and changed it into my ritual-->
 				<defaultDuty>Party</defaultDuty>
 				<endTriggers>
 					<li Class="StageEndTrigger_DurationPercentage">
-						<percentage>0.7</percentage>
+						<percentage>0.6</percentage>
 					</li>
 				</endTriggers>
 			</li>
@@ -175,7 +175,7 @@ and changed it into my ritual-->
 		<li Class="RitualOutcomeComp_PawnStatScaled">
 			<label>{PAWN_labelShort}'s social impact</label>
 			<labelAbstract>speaker's social impact</labelAbstract>
-			<roleId>Leader</roleId>
+			<roleId>speaker</roleId>
 			<statDef>SocialImpact</statDef>
 			<curve>
 				<points>
@@ -187,17 +187,17 @@ and changed it into my ritual-->
 			</curve>
 		</li>
 
-	<li Class="RitualOutcomeComp_BuildingOfDefUsed">
-        <def>Lectern</def>
-		<qualityOffset>0.2</qualityOffset>
-        <maxHorDistFromTarget>5</maxHorDistFromTarget>
-      </li>
+		<li Class="RitualOutcomeComp_BuildingOfDefUsed">
+    	    <def>Lectern</def>
+			<qualityOffset>0.2</qualityOffset>
+        	<maxHorDistFromTarget>5</maxHorDistFromTarget>
+    	</li>
 
-      <li Class="RitualOutcomeComp_RitualSeatPresent">
-        <qualityOffset>0.2</qualityOffset>
-      </li>
-      <li Class="RitualOutcomeComp_ParticipantCount">
-        <label>participant count</label>
+      	<li Class="RitualOutcomeComp_RitualSeatPresent">
+        	<qualityOffset>0.2</qualityOffset>
+      	</li>
+      	<li Class="RitualOutcomeComp_ParticipantCount">
+	        <label>participant count</label>
         <curve>
           <points>
             <li>(1,  0.0)</li>
@@ -205,7 +205,7 @@ and changed it into my ritual-->
             <li>(10, 0.35)</li>
           </points>
         </curve>
-      </li>
+    	</li>
       <li Class="RitualOutcomeComp_RitualTargetDefs">
         <allowAltars>true</allowAltars>
         <label>started at altar</label>
@@ -213,12 +213,13 @@ and changed it into my ritual-->
         <qualityOffset>0.15</qualityOffset>
       </li>
     </comps>
+
     <outcomeChances>
       <li>
         <label>Boring</label>
         <chance>0.15</chance>
 		<ideoCertaintyOffset>-0.5</ideoCertaintyOffset>
-        <memory>BoringInitiation</memory>
+        <!--memory>BoringInitiation</memory-->
         <description>The {0} was boring. There was little passion, like the speaker didn't want the Initiatee in the Coven.</description>
         <positivityIndex>-1</positivityIndex>
       </li>
@@ -226,7 +227,7 @@ and changed it into my ritual-->
         <label>Satisfying</label>
         <chance>0.65</chance>
 		<ideoCertaintyOffset>-1</ideoCertaintyOffset>
-        <memory>SatisfyingInitiation</memory>
+        <!--memory>SatisfyingInitiation</memory-->
         <description>The {0} was satisfying. We welcomed the Initiatee into the Coven.</description>
         <positivityIndex>2</positivityIndex>
       </li>
@@ -234,7 +235,7 @@ and changed it into my ritual-->
         <label>Spectacular</label>
         <chance>0.2</chance>
 		<ideoCertaintyOffset>-1</ideoCertaintyOffset>
-        <memory>SpectacularInitation</memory>
+        <!--memory>SpectacularInitation</memory-->
         <description>The {0} was spectacular! We welcomed the Initiatee warmly into the Coven!</description>
         <positivityIndex>5</positivityIndex>
       </li>

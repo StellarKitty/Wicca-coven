@@ -191,4 +191,23 @@
         </match>
     </Operation>
 
+<!-- Adding Exclusion Godlike Emperor -->
+    <Operation Class="PatchOperationConditional">
+        <xpath>Defs/PreceptDef[defName="VME_BodyMod_OnlyBiological"]/requiredMemes</xpath>
+        <nomatch Class="PatchOperationAdd">
+            <xpath>Defs/PreceptDef[defName="VME_BodyMod_OnlyBiological"]</xpath>
+            <value>
+                <associatedMemes>
+                    <li>Wicca</li>
+                </associatedMemes>
+            </value>
+        </nomatch>
+        <match Class="PatchOperationAdd">
+            <xpath>Defs/PreceptDef[defName="VME_BodyMod_OnlyBiological"]/requiredMemes</xpath>
+            <value>
+                <li>Wicca</li>
+            </value>
+        </match>
+    </Operation>
+
 </Patch>

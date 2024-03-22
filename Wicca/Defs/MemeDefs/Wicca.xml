@@ -38,6 +38,10 @@
     <agreeableTraits>
       <li>Kind</li>
     </agreeableTraits>
+    <disagreeableTraits>
+      <li>Jealous</li>
+      <li>Transhumanist</li>
+    </disagreeableTraits>
     <descriptionMaker>
       <!--constants>
 				<li>
@@ -71,6 +75,11 @@
         <li>AutonomousWeapons_Prohibited</li>
         <li>AutonomousWeapons_Horrible</li>
         <li>AutonomousWeapons_Disapproved</li>
+      </li>
+      <li>
+        <li>BodyMod_Disapproved</li>
+        <li>VME_BodyMod_OnlyBiological</li>
+        <li>BodyMod_Abhorrent</li>
       </li>
     </requireOne>
     <!--selectOneOrNone>
