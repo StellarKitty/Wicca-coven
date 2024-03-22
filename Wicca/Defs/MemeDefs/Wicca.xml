@@ -8,7 +8,7 @@
     <iconPath>UI/wicca</iconPath>
     <groupDef>Primacy</groupDef>
     <impact>2</impact>
-    <worshipRoomLabel>Temple</worshipRoomLabel>
+    <!--worshipRoomLabel>Temple</worshipRoomLabel-->
     <renderOrder>50</renderOrder>
     <veneratedAnimalsCountOffset>1</veneratedAnimalsCountOffset>
     <exclusionTags>
@@ -62,6 +62,18 @@
         <adjective>wiccan</adjective>
         <member>Wiccan</member>
       </li>
+      <li>
+        <ideoName>the Coven</ideoName>
+        <theme>witch</theme>
+        <adjective>witchy</adjective>
+        <member>Witch</member>
+      </li>
+      <li>
+        <ideoName>the Mystery</ideoName>
+        <theme>mystic</theme>
+        <adjective>mystical</adjective>
+        <member>Mystique</member>
+      </li>
     </symbolPacks>
     <requireOne>
       <li>
@@ -82,10 +94,6 @@
         <li>BodyMod_Abhorrent</li>
       </li>
     </requireOne>
-    <!--selectOneOrNone>
-      <noneChance>0.6</noneChance>
-        <precept>Cannibalism_Acceptable</precept>
-    </selectOneOrNone-->
     <thingStyleCategories>
       <li>
         <category>VME_Esotericism</category>

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <ModMetaData>
-	<name>Wicca</name>
-    <packageId>wicca.coven</packageId>
+	<name>Wicca (Meme for Ideology)</name>
+    <packageId>wiccacoven.stellar_kitty</packageId>
 	<author>stellar_kitty</author>
     <!--downloadUrl>steamcommunity.com</downloadUrl-->
 
 	<supportedVersions>
     	<li>1.3</li>
 		<li>1.4</li>
+        <li>1.5</li>
         <li>1.5</li>
 	</supportedVersions>
 
@@ -31,6 +32,7 @@
             <packageId>thesepeople.RitualAttachableOutcomes</packageId>
             <displayName>Custom Ritual Framework</displayName>
             <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2561617361</steamWorkshopUrl>
+        </li>
     </modDependencies>
 
     <forceLoadAfter>
@@ -38,9 +40,10 @@
     </forceLoadAfter>
 
     <description>This mod adds another Meme I couldn't find in the Steam Workshop. 
-It works best with Oskar's Vanilla Ideology Expanded and thesepeople's Custom Ritual Framework, for the mod refers to some of that code.
+It works best with Oskar's Vanilla Ideology Expanded and thesepeople's Custom Ritual Framework, for the mod refers to and uses some of that code.
 Also, you obviously have to have Ideology installed.
 The mod lets you make your own Wicca Coven, trying to preserve and protect nature. 
-Should work in 1.5
+
+Should work with 1.5, as this mod only adds a Meme for Ideology.
     </description>
 </ModMetaData>
