@@ -2,7 +2,7 @@
 
 <ModMetaData>
 	<name>Wicca (Meme for Ideology)</name>
-    <packageId>wiccacoven.stellarkitty</packageId>
+    <packageId>wiccacoven.stellar_kitty</packageId>
 	<author>stellar_kitty</author>
     <!--downloadUrl>steamcommunity.com</downloadUrl-->
 
@@ -31,6 +31,7 @@
             <packageId>thesepeople.RitualAttachableOutcomes</packageId>
             <displayName>Custom Ritual Framework</displayName>
             <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2561617361</steamWorkshopUrl>
+        </li>
     </modDependencies>
 
     <forceLoadAfter>
