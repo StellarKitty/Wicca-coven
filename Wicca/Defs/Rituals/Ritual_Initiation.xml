@@ -165,7 +165,7 @@ and changed it into my ritual-->
   
   <RitualOutcomeEffectDef>
     <defName>InitiationOutcome</defName>
-    <description>Depending on ritual quality, participants will get between {MINMOOD} and {MAXMOOD} mood for {MOODDAYS} days.</description>
+    <description>Depending on ritual quality, participants will get between -1 and 5 mood for 10 days.</description>
 
 	<!-- use this to specify using a custom outcome -->
 	<workerClass>TPRitualAttachableOutcomes.RitualOutcomeEffectWorker_FromQuality_TP_Custom</workerClass>
@@ -247,7 +247,7 @@ and changed it into my ritual-->
   <ThoughtDef>
     <defName>BoringInitiation</defName>
     <thoughtClass>Thought_AttendedRitual</thoughtClass>
-    <durationDays>6</durationDays>
+    <durationDays>10</durationDays>
     <stackLimit>3</stackLimit>
     <stages>
       <li>
@@ -261,7 +261,7 @@ and changed it into my ritual-->
   <ThoughtDef>
     <defName>SatisfyingInitiation</defName>
     <thoughtClass>Thought_AttendedRitual</thoughtClass>
-    <durationDays>6</durationDays>
+    <durationDays>10</durationDays>
     <stackLimit>3</stackLimit>
     <stages>
       <li>
@@ -275,7 +275,7 @@ and changed it into my ritual-->
   <ThoughtDef>
     <defName>SpectacularInitation</defName>
     <thoughtClass>Thought_AttendedRitual</thoughtClass>
-    <durationDays>6</durationDays>
+    <durationDays>10</durationDays>
     <stackLimit>3</stackLimit>
     <stages>
       <li>
