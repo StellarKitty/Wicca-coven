@@ -20,7 +20,7 @@ and changed it into my ritual-->
 	<description>A Ritual to welcome someone into the Coven.</description>
     <issue>Ritual</issue>
     <impact>Medium</impact>
-    <iconPath>UI/Icons/Rituals/CelebrationPartyDanceDrums</iconPath>
+    <iconPath>UI/CovenInitiation</iconPath>
     <preceptClass>Precept_Ritual</preceptClass>
     <ritualPatternBase>Initiation</ritualPatternBase>
     <allowDuplicates>true</allowDuplicates>
@@ -46,7 +46,7 @@ and changed it into my ritual-->
 		
 		<nameMaker>NamerRitualFestival</nameMaker>
 		<ritualExpectedDesc>Every once in a while, {MEMBERS} celebrate {RITUAL_labelDef}.</ritualExpectedDesc>
-		<iconPathOverride>UI/Icons/Rituals/CelebrationPartyDanceDrums</iconPathOverride>
+		<iconPathOverride>UI/CovenInitiation</iconPathOverride>
 		<canStartAnytime>true</canStartAnytime>
 		<ritualObligationTriggers>
 			<li Class="RitualObligationTrigger_DateProperties">
