@@ -1,0 +1,7 @@
+Changelog:
+0.1.1.2
+- reactivated the Memories for the Pawns after the Ritual
+- changed the percentages for the outcomes the ritual can give
+- I decided to not add Ideo Dev Points to the Initiation Ritual. There is a weird curve, and until I find out how to individualise this curve, the ritual won't add any DevPoints
+0.1.1.1
+- Changed the picture for the Initiation Ritual. It's now unique!
