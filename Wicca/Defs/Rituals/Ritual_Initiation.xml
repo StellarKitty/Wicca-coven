@@ -47,7 +47,7 @@ and changed it into my ritual-->
 		<nameMaker>NamerRitualFestival</nameMaker>
 		<ritualExpectedDesc>Every once in a while, {MEMBERS} celebrate {RITUAL_labelDef}.</ritualExpectedDesc>
 		<iconPathOverride>UI/CovenInitiation</iconPathOverride>
-		<canStartAnytime>true</canStartAnytime>
+		<alwaysStartAnytime>true</alwaysStartAnytime>
 		<ritualObligationTriggers>
 			<li Class="RitualObligationTrigger_DateProperties">
 				<mustBePlayerIdeo>true</mustBePlayerIdeo>
@@ -169,7 +169,7 @@ and changed it into my ritual-->
 
 	<!-- use this to specify using a custom outcome -->
 	<workerClass>TPRitualAttachableOutcomes.RitualOutcomeEffectWorker_FromQuality_TP_Custom</workerClass>
-
+	<givesDevelopmentPoints>false</givesDevelopmentPoints>
     <allowAttachableOutcome>false</allowAttachableOutcome>
     <comps>
 		<li Class="RitualOutcomeComp_PawnStatScaled">
@@ -217,25 +217,25 @@ and changed it into my ritual-->
     <outcomeChances>
       <li>
         <label>Boring</label>
-        <chance>0.15</chance>
+        <chance>0.2</chance>
 		<ideoCertaintyOffset>-0.5</ideoCertaintyOffset>
-        <!--memory>BoringInitiation</memory-->
+        <memory>BoringInitiation</memory>
         <description>The {0} was boring. There was little passion, like the speaker didn't want the Initiatee in the Coven.</description>
         <positivityIndex>-1</positivityIndex>
       </li>
       <li>
         <label>Satisfying</label>
-        <chance>0.65</chance>
-		<ideoCertaintyOffset>-1</ideoCertaintyOffset>
-        <!--memory>SatisfyingInitiation</memory-->
+        <chance>0.7</chance>
+		<ideoCertaintyOffset>-0.9</ideoCertaintyOffset>
+        <memory>SatisfyingInitiation</memory>
         <description>The {0} was satisfying. We welcomed the Initiatee into the Coven.</description>
         <positivityIndex>2</positivityIndex>
       </li>
       <li>
         <label>Spectacular</label>
-        <chance>0.2</chance>
+        <chance>0.1</chance>
 		<ideoCertaintyOffset>-1</ideoCertaintyOffset>
-        <!--memory>SpectacularInitation</memory-->
+        <memory>SpectacularInitation</memory>
         <description>The {0} was spectacular! We welcomed the Initiatee warmly into the Coven!</description>
         <positivityIndex>5</positivityIndex>
       </li>
@@ -252,7 +252,7 @@ and changed it into my ritual-->
     <stages>
       <li>
         <label>boring Initiation</label>
-        <description>It was like no one didn't really care</description>
+        <description>It was like no one cared</description>
         <baseMoodEffect>-1</baseMoodEffect>
       </li>
     </stages>
