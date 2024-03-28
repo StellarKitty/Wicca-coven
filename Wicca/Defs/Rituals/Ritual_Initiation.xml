@@ -165,11 +165,11 @@ and changed it into my ritual-->
   
   <RitualOutcomeEffectDef>
     <defName>InitiationOutcome</defName>
-    <description>Depending on ritual quality, participants will get between -1 and 5 mood for 10 days.</description>
+    <description>Depending on ritual quality, participants will get between -3 and 5 mood for 10 days.</description>
 
 	<!-- use this to specify using a custom outcome -->
 	<workerClass>TPRitualAttachableOutcomes.RitualOutcomeEffectWorker_FromQuality_TP_Custom</workerClass>
-	<givesDevelopmentPoints>false</givesDevelopmentPoints>
+	<givesDevelopmentPoints>true</givesDevelopmentPoints>
     <allowAttachableOutcome>false</allowAttachableOutcome>
     <comps>
 		<li Class="RitualOutcomeComp_PawnStatScaled">
@@ -216,8 +216,16 @@ and changed it into my ritual-->
 
     <outcomeChances>
       <li>
+        <label>Terrible</label>
+        <chance>0.01</chance>
+		<ideoCertaintyOffset>0</ideoCertaintyOffset>
+        <memory>TerribleInitiation</memory>
+        <description>The {0} was utterly terrible! The Initiatee decided to not join our Coven...</description>
+        <positivityIndex>-3</positivityIndex>
+      </li>
+      <li>
         <label>Boring</label>
-        <chance>0.2</chance>
+        <chance>0.19</chance>
 		<ideoCertaintyOffset>-0.5</ideoCertaintyOffset>
         <memory>BoringInitiation</memory>
         <description>The {0} was boring. There was little passion, like the speaker didn't want the Initiatee in the Coven.</description>
@@ -243,6 +251,19 @@ and changed it into my ritual-->
 	
   </RitualOutcomeEffectDef>
   
+  <ThoughtDef>
+    <defName>TerribleInitiation</defName>
+    <thoughtClass>Thought_AttendedRitual</thoughtClass>
+    <durationDays>10</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>terrible Initiation</label>
+        <description>Just terrible...</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
 
   <ThoughtDef>
     <defName>BoringInitiation</defName>
