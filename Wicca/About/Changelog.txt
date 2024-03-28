@@ -1,4 +1,7 @@
 Changelog:
+0.1.1.3
+- Finally fixed the DevPoints 
+- added another Outcome for the ritual 
 0.1.1.2
 - reactivated the Memories for the Pawns after the Ritual
 - changed the percentages for the outcomes the ritual can give
