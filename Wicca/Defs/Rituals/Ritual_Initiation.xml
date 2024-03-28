@@ -251,6 +251,19 @@ and changed it into my ritual-->
 	
   </RitualOutcomeEffectDef>
   
+  <ThoughtDef>
+    <defName>TerribleInitiation</defName>
+    <thoughtClass>Thought_AttendedRitual</thoughtClass>
+    <durationDays>10</durationDays>
+    <stackLimit>3</stackLimit>
+    <stages>
+      <li>
+        <label>terrible Initiation</label>
+        <description>Just terrible...</description>
+        <baseMoodEffect>-3</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
 
   <ThoughtDef>
     <defName>BoringInitiation</defName>
