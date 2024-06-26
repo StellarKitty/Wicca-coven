@@ -134,7 +134,7 @@
         </match>
     </Operation>
 
-<!-- Adding Exclusion Violent Conversion -->
+<!-- Adding Exclusion Violent Conversion >
     <Operation Class="PatchOperationConditional">
         <xpath>Defs/MemeDef[defName="VME_ViolentConversion"]/exclusionTags</xpath>
         <nomatch Class="PatchOperationAdd">
@@ -151,7 +151,7 @@
                 <li>WiccaOrViolence</li>
             </value>
         </match>
-    </Operation>
+    </Operation>-->
 
 <!-- Adding Exclusion Godlike Emperor -->
     <Operation Class="PatchOperationConditional">
@@ -172,7 +172,7 @@
         </match>
     </Operation>
 
-<!-- Adding Exclusion Godlike Emperor -->
+<!-- Adding Exclusion Structure Archist -->
     <Operation Class="PatchOperationConditional">
         <xpath>Defs/MemeDef[defName="Structure_Archist"]/exclusionTags</xpath>
         <nomatch Class="PatchOperationAdd">
