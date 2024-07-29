@@ -1,4 +1,9 @@
 Changelog:
+0.1.2
+- added high farming yield
+- allowed violent conversion
+- took out agreeable and disagreeable traits
+- and just making the code better looking
 0.1.1.3
 - Finally fixed the DevPoints 
 - added another Outcome for the ritual 

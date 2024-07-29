@@ -31,31 +31,32 @@
         <li>memeAdjective->witch</li>
         <li>memeAdjective->magical</li>
         <li>memeCreed->garden</li>
+        <li>memeCreed->coven</li>
         <li>memeConcept->witch</li>
         <li>memeLeaderNoun->Head Witch</li>
       </rulesStrings>
     </generalRules>
-    <agreeableTraits>
+    <!--<agreeableTraits>
       <li>Kind</li>
       <li>Ascetic</li>
     </agreeableTraits>
     <disagreeableTraits>
       <li>Jealous</li>
       <li>Transhumanist</li>
-    </disagreeableTraits>
-    <descriptionMaker>
-      <!--constants>
+    </disagreeableTraits>-->
+    <!--descriptionMaker>
+      <constants>
 				<li>
 					<key>structure_esotericism</key>
 					<value>true</value>
           <priority>4</priority>
 				</li>
-			</constants-->
+			</constants>
       <rules>
         <rulesStrings>
         </rulesStrings>
       </rules>
-    </descriptionMaker>
+    </descriptionMaker>-->
     <symbolPacks>
       <li>
         <ideoName>the Coven</ideoName>
@@ -93,7 +94,6 @@
         <li>AutonomousWeapons_Disapproved</li>
       </li>
       <li>
-        <li>BodyMod_Disapproved</li>
         <li>VME_BodyMod_OnlyBiological</li>
         <li>BodyMod_Abhorrent</li>
       </li>
